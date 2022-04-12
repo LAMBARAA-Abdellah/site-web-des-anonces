@@ -1,5 +1,5 @@
 ***********************************************************************************************************************************************************************
-							                         "LARAVEL"	
+							                        "LARAVEL"	
 *Laravel est un framework d'application Web avec une syntaxe expressive et élégante.
 Un framework Web fournit une structure et un point de départ pour la création de votre application,
 vous permettant de vous concentrer sur la création de quelque chose d'incroyable pendant que nous transpirons les détails.
