@@ -1,0 +1,43 @@
+***********************************************************************************************************************************************************************
+												"LARAVEL"	
+*Laravel est un framework d'application Web avec une syntaxe expressive et élégante.
+Un framework Web fournit une structure et un point de départ pour la création de votre application,
+vous permettant de vous concentrer sur la création de quelque chose d'incroyable pendant que nous transpirons les détails.
+Laravel s'efforce de fournir une expérience de développement incroyable tout en fournissant des fonctionnalités puissantes 
+telles qu'une injection de dépendance approfondie, une couche d'abstraction de base de données expressive,
+ des files d'attente et des tâches planifiées, des tests unitaires et d'intégration, etc.
+Que vous soyez nouveau dans les frameworks Web PHP ou que vous ayez des années d'expérience,
+ Laravel est un framework qui peut évoluer avec vous. Nous vous aiderons à faire vos premiers pas en tant que développeur Web 
+ou vous donnerons un coup de pouce pour faire passer votre expertise au niveau supérieur. Nous avons hâte de voir ce que vous
+ construisez.
+************************************************************************************************************************************************************************
+												"COMPOSER"
+	*Composer est un gestionnaire de dépendances/paquets pour PHP. Il peut être utilisé pour installer, suivre et mettre à jour
+ les dépendances de votre projet.
+ Composer prend également en charge le chargement automatique des dépendances sur lesquelles repose votre application, 
+vous permettant ainsi d'utiliser facilement la dépendance.
+dans votre projet sans vous soucier de les inclure en haut d'un fichier donné.
+Les dépendances de votre projet sont répertoriées dans un fichier composer.json qui se trouve généralement à la racine de votre projet.
+ Ce fichier contient des informations sur les versions requises des packages pour la production et le développement.
+***********************************************************************************************************************************************************************
+												"ARTISAN"	
+*Artisan est le nom de l'interface de ligne de commande incluse avec Laravel. Il fournit un certain nombre de commandes 
+utiles pour votre utilisation lors du développement de votre application. Il est piloté par le puissant composant Laravel Console.
+***********************************************************************************************************************************************************************
+												  "ORM"	
+*(ORM)Eloquent est un mappeur relationnel d'objet (ORM) qui est inclus par défaut dans le framework Laravel. Un ORM est un logiciel qui 
+facilite la gestion des enregistrements de base de données en représentant les données comme des objets, fonctionnant comme une couche d'abstraction
+ au-dessus du moteur de base de données utilisé pour stocker les données d'une application.
+Eloquent facilite la tâche d'interaction avec les tables de base de données, en fournissant une approche orientée objet pour l'insertion, 
+la mise à jour et la suppression d'enregistrements de base de données, tout en fournissant une interface simplifiée pour l'exécution de requêtes SQL complexes.
+***********************************************************************************************************************************************************************
+												"MIGRATION"	
+*Migration est une fonctionnalité essentielle de Laravel qui vous permet de créer une table dans votre base de données. Il vous permet de modifier
+et de partager le schéma de base de données de l'application. Vous pouvez modifier le tableau en ajoutant une nouvelle colonne ou en supprimant une colonne existante.
+Supposons que nous travaillions en équipe et que certaines idées nécessitent la modification d'un tableau. Dans un tel cas, le fichier SQL doit être transmis et un membre 
+de l'équipe doit importer ce fichier, mais un membre de l'équipe a oublié d'importer le fichier SQL. Dans ce cas, l'application ne fonctionnera pas correctement, 
+pour éviter une telle situation, Laravel Migration existe.
+Laravel Migration vous permet d'ajouter une nouvelle colonne ou de supprimer les enregistrements de votre base de données sans supprimer les enregistrements déjà présents.
+
+
+
