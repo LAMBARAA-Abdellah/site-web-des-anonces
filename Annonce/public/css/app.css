@@ -11,6 +11,15 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=My+Soul&family=Ramaraja&display=swap');
 
+.data {
+  display: flex;
+
+}
+
+
+
+
+
 button a {
   text-decoration: none;
 }
@@ -22,7 +31,6 @@ input[type=submit] {
   width: 8em;
   height: 3em;
   font-size: 110%;
-  font-weight: bold;
   text-align: center;
   border-radius: 10px !important;
   /* margin-right: 40px !important;
@@ -36,7 +44,7 @@ input[type=submit] {
 
 .cardc {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 60%;
+  width: 60%;
   margin: auto;
   margin-bottom: 100px;
   /* text-align: center;
@@ -46,23 +54,86 @@ input[type=submit] {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.card {
+.cardP {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  margin: auto;
   text-align: center;
   font-family: arial;
+  margin-bottom: 40px;
+  height: 568px;
+  position: relative;
+  border-radius: 10px;
 }
 
-.card img {
+.desc {
+  height: 72px;
+}
+
+.image {
   background-position: center;
   background-size: cover;
   width: 300px;
+  /* margin: 10px; */
   height: 300px;
   background-image: url(../img/nopic.png);
+}
+
+.setting {
+  position: absolute;
+  width: 8%;
+  top: 1%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.operContent {
+  display: none;
+  position: fixed;
+  background: white;
+  color: black;
+  font-size: 90%;
+  padding: 2%;
+  border-radius: 10px;
+
+  margin-top: 4%;
+  z-index: 1;
+}
+
+
+.choix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choix a {
+  padding: 2%;
+  border-radius: 5px;
+  width: 48%;
+  cursor: pointer;
+  border: solid 2px black;
+  margin-top: 1%;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  color: black;
+}
+
+.choix a:hover {
+  background: gray;
+  color: white;
+}
+
+#operclose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 150%;
 }
 
 .price {
@@ -81,7 +152,7 @@ input[type=submit] {
   width: 100%;
   font-size: 18px;
 } */
-.card p button {
+.cardP p button {
   border: none;
   outline: 0;
   padding: 12px;
@@ -91,6 +162,9 @@ input[type=submit] {
   /* cursor: pointer; */
   width: 100%;
   font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* .card button:hover {
@@ -115,12 +189,12 @@ input[type=submit] {
   overflow-y: hidden;
 }
 
-.container a {
+.commande a {
   color: #fff !important;
   font-weight: bold;
 }
 
-.container a:hover {
+.commande a:hover {
   color: yellow !important;
   /* font-weight: bold; */
 }
@@ -172,26 +246,27 @@ input[type=submit] {
 }
 
 .log {
-  color: yellow;
+  background-color: antiquewhite;
   width: 10em;
   height: 3em;
   color: white;
   font-size: 110%;
   font-weight: bold;
-  color: white;
   text-align: center;
   border-radius: 10px !important;
   margin-right: 40px !important;
-  /* font-size: 16px; */
-  /* margin: 4px 2px; */
   opacity: 0.6;
   transition: 1.3s;
   margin-right: 200px;
-  background-color: white !important;
-  color: black !important;
+  color: black;
   border: none;
 }
 
+.nav-link {
+  color: yellow !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
 
 .log:hover {
@@ -199,7 +274,7 @@ input[type=submit] {
   background-color: yellow !important;
 }
 
-span {
+.spantitle {
   color: yellow;
   /* /* font-family: 'ramaraja'; */
   font-family: 'Beau Rivage', cursive;
@@ -213,6 +288,8 @@ span {
   /* border-color: #007bff; */
 
 }
+
+
 
 li {
   padding-right: 20px;
@@ -258,13 +335,20 @@ li {
 }
 
 .creation {
+  letter-spacing: 1px;
   margin-top: 30px;
   text-align: center;
+  color: white;
   align-items: center;
-  border: solid 1px gray;
-  background-color: gainsboro;
+  /* border: solid 1px gray;   */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  background-color: #6b7280;
   margin-bottom: 10px;
   border-radius: 10px;
+}
+
+.creation h2 {
+  font-family: emoji;
 }
 
 .creation button {
@@ -276,8 +360,6 @@ li {
   text-align: center;
   border-radius: 10px !important;
   margin-right: 40px !important;
-  /* opacity: 0.6; */
-  /* transition: 1.3s; */
   margin-right: 200px;
   background-color: yellow !important;
   color: black !important;
@@ -286,13 +368,17 @@ li {
 
 }
 
+.ajouter a {
+  color: #000000 !important;
+  font-weight: bold;
+}
 
 .sous-nav {
   padding: 20px;
   text-align: center;
 }
 
-.sous-nav button {
+.sous-nav .commande {
   border: none;
   outline: 0;
   padding: 12px;
@@ -301,8 +387,48 @@ li {
   text-align: center;
   cursor: pointer;
   width: 150px;
+  border-radius: 10px;
   font-size: 18px;
 }
+
+
+
+
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.bottom {
+  background-color: #6b7280;
+  color: white;
+  margin-top: auto;
+  padding: 20px;
+}
+
+.bottom .copyright {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+.copyright a {
+  color: #f2ff49;
+  margin-left: 3px;
+  padding-right: 3px;
+}
+
+.bottom p {
+  margin-bottom: 0;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.copyright p span {
+  color: #d1caca;
+}
+
 
 
 */ *,
@@ -350,9 +476,13 @@ html {
 */
 
 body {
+  /* background-color: rgb(243 244 246 / var(--tw-bg-opacity)); */
   margin: 0;
   /* 1 */
   line-height: inherit;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   /* 2 */
 }
@@ -379,6 +509,12 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
+}
+
+@media (min-width: 768px) {
+  .offset-md-4 {
+    margin-left: 68.8% IMPORTANT;
+  }
 }
 
 /*
@@ -998,8 +1134,34 @@ select {
 }
 
 @media (max-width: 640px) {
+  .search {
+    display: flex;
+    margin: 4px 22px;
+  }
+
+  .bt {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bienvenu h1 {
+    margin-top: 5em;
+    font-size: 2rem;
 
 
+  }
+
+  .bienvenu h1 span {
+    font-size: 4rem;
+
+
+  }
+
+  .cardc {
+    width: 90%;
+  }
 
   .navadd {
 
@@ -1996,32 +2158,32 @@ select {
 
 .bg-gray-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  /* background-color: rgb(243 244 246 / var(--tw-bg-opacity)); */
 }
 
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+  /* background-color: rgb(99 102 241 / var(--tw-bg-opacity)); */
 }
 
 .bg-red-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+  /* background-color: rgb(185 28 28 / var(--tw-bg-opacity)); */
 }
 
 .bg-gray-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  /* background-color: rgb(107 114 128 / var(--tw-bg-opacity)); */
 }
 
 .bg-indigo-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+  /* background-color: rgb(79 70 229 / var(--tw-bg-opacity)); */
 }
 
 .bg-red-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  /* background-color: rgb(220 38 38 / var(--tw-bg-opacity)); */
 }
 
 .bg-gray-800 {
@@ -2036,17 +2198,17 @@ select {
 
 .bg-gray-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  /* background-color: rgb(249 250 251 / var(--tw-bg-opacity)); */
 }
 
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+  /* background-color: rgb(238 242 255 / var(--tw-bg-opacity)); */
 }
 
 .bg-gray-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  /* background-color: rgb(229 231 235 / var(--tw-bg-opacity)); */
 }
 
 .bg-opacity-25 {
@@ -2982,4 +3144,49 @@ select {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.show {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: gray !important;
+  border-color: white !important;
+  color: white !important;
+}
+
+.page-link {
+  color: gray !important;
+}
+
+
+
+.register-card {
+  margin-top: 140px;
+}
+
+.login-form {
+  margin-top: -80px;
+}
+
+.card {
+  margin-top: 100px;
+}
+
+.col-md-6 button {
+  background-color: #1f2937;
+}
+
+.search {
+  width: max-content;
+}
+
+.search {
+  display: flex;
 }

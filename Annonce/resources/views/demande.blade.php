@@ -8,11 +8,11 @@ welcome
 @endsection
 
 @section('content')
-<nav id="ps1" class="  navbar navbar-expand-md navbar-light bg-white shadow-sm">
+{{-- <nav id="ps1" class="  navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a id="logo" class="navbar-brand" href="{{ url('/') }}">
             {{-- {{ config('app.name', 'Laravel') }} --}}
-            Electronique
+            {{-- Electronique
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@ welcome
                         <a class="nav-link" href="{{ url('/')  }}">{{ __('Apropos') }}</a>
                     </li>
 
-                </div>
+                </div> --}}
                
                 {{-- @guest
                 <div class="navauth">
@@ -74,110 +74,80 @@ welcome
                         </div>
                     </li>
                 @endguest --}}
-            </ul>
+            {{-- </ul>
         </div>
     </div>
-</nav>
+</nav>  --}}
 
 <div class="all">
 
-        <div class="container">
-           <div class="creation  ">
-            <h2>cree et partager vos annonce pour cominiquer avec les client </h2>
-                <button>
-                    Ajouter 
-                </button>    
-           </div>
-           <div class="sous-nav">
-                <button>
-                    <a href="{{ url('/annonce')  }}"> Annonce</a> 
-                </button>     
-                <button>
-                    <a href="#"> Demande</a> 
-                </button>   
-           </div>
-       
+    <div class="container">
+       <div class="creation  ">
+        <h2>cree et partager vos demmande et cominiquer avec les client </h2>
+        <a href="/create">
+            <button class="ajouter">Ajouter 
+            </button>    
+        </a>   
+       </div>
+       <div class="sous-nav">
+        <a  href="annonces"> 
+            <button class="commande">
+               Annonce
+            </button> 
+        </a>     
+        <a href="demandes">
+            <button style="font-weight: bold" class="commande">
+                 Demande
+            </button>  
+            </a>  
+       </div>
+   
+                   
+    </div>
+    <div class="search">
+        <div class="row m-2">
+            <form class="search" action="" method="get">
+            <div class="form-group">
+               
+                        <input type="search" name="search" class="form-control" placeholder="Rechercher une annonce">
                        
+            </div>      
+            <div>
+                <button  type="submit" class=" btn btn-warning">                                
+                    Search
+                </button>
+            </div>   
+                       
+                </form>
         </div>
-        <div class="cards">
-            
-<div class="card">
-    <img src="./img/casque4.png"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
+</div>
+    <div class="cards">
+       
+        @foreach ($post as $pos)
+       
+<div class="cardP">
+<img class="image" src="./img/{{ $pos->photo}}" >
+<h2>{{ $pos->titre}}</h2>
+<h5>par:{{ $pos->name}}</h5>
 
+<p class="price">{{ $pos->prix}} $</p>
+<p class="desc">{{ $pos->Description}}.</p>
+<p><button>Tel: {{ $pos->tel}}</button></p>
+</div>
 
-  <div class="card">
-    <img src="./img/tel1.png"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
-
-  <div class="card">
-    <img src="./img/casque2.png"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
-
-
-  <div class="card">
-    <img src="./img/pc5.jpg"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
-
-
-   <div class="card">
-    <img src="./img/pc2.jpg"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
-
-
-
-   <div class="card">
-    <img src="./img/casque1.png"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
-  
-  <div class="card">
-    <img src="./img/pc3.jpg"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div> 
-  
-  <div class="card">
-    <img src="./img/tel2.png"    style="width:100%">
-    <h1>Tailored Jeans</h1>
-    <p class="price">$19.99</p>
-    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-    <p><button>Add to Cart</button></p>
-  </div>
+@endforeach
 
 
 
 
-        </div>
-
+    </div>
+    <div class="container">
+        {{$post->links('master.pagination')}}
+      
+    </div>
 
 <div>
-  
+
 
 
 

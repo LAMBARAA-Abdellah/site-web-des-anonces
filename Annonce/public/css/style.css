@@ -1,0 +1,42 @@
+li {
+    padding-right: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.navadd {
+    margin-right: auto;
+    margin-right: auto;
+    display: flex;
+    margin-left: -50%;
+
+}
+
+.navauth {
+
+    display: flex;
+    /* margin-left: -100%; */
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.nav div img {
+    width: 100px;
+    height: 100px;
+
+}

@@ -1,7 +1,7 @@
-@extends('layouts.app')
-
+@extends('Master.layout')
+{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> --}}
 @section('content')
-<div class="container">
+<div style="margin" class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -62,7 +62,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button style="background-color:#007bff" type="submit" class="btn btn-primary">
+                                <button style="background-color: yellow;border:none ;color:black"  style="background-color:#007bff" type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>

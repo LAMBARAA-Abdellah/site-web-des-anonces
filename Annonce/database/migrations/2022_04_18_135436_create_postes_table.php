@@ -13,17 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('poste', function (Blueprint $table) {
+        Schema::create('postes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Description');
             $table->string('photo');
             $table->string('type');
-            $table->string('name');
+            $table->string('titre');
+            $table->string('tel');
             $table->string('prix');
             $table->timestamps();
-            $table->unsignedInteger('id_utilisateur');
-            // $table->foreign('id_utilisateur')->references('id')->on('utilisateur');
-            // $table->foreign('user_id')->references('id')->on('users');
+            // $table->unsignedInteger('id_utilisateur');
+            $table->foreign('id_utilisateur')->references('id')->on('utilisateur');
+
             $table->foreignId('id_utilisateur')
                 ->constrained()
                 ->onUpdate('cascade')
@@ -38,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('poste');
+        Schema::dropIfExists('postes');
     }
 };
